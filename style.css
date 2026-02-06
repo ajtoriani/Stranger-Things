@@ -1,0 +1,556 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Benguiat";
+    src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #0C0102;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 4px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4vw;
+    position: absolute;
+    z-index: 9;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    padding: 7vw;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    gap: 12px;
+    border: none;
+    outline: none;
+    padding: 16px 0px;
+    border-bottom: 1px solid white;
+}
+
+/* PRELOADER */
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background-color: #0C0102;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+#preloader svg {
+    width: 40vw;
+    height: auto;
+}
+
+#preloader path {
+    fill: rgba(168, 19, 19, 0.364);
+    stroke: rgba(168, 19, 19);
+    stroke-dasharray: 1134;
+    stroke-dashoffset: 1134;
+}
+
+.ajlink {
+    text-decoration: none;
+    color: white;
+}
+
+.bgMonstro {
+    background-image: url("imagens/bg-sec2.webp");
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+    background-color: #0C0102;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* SEÇÃO HERO */
+.hero {
+    background-position: 50% 0%;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100svh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7vw 7vw 7vw;
+    position: relative;
+}
+
+.hero picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.hero .esquerda,
+.hero .direita {
+    z-index: 3;
+    width: 30%;
+}
+
+.hero .esquerda h3 {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.hero .esquerda h1 {
+    font-size: 3.7vw;
+    font-family: "Benguiat";
+}
+
+.hero .direita {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.hero .direita p {
+    font-size: 2vw;
+    margin-bottom: 32px;
+    text-align: end;
+}
+
+.hero:before {
+    content: "";
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+}
+
+/* SEÇÃO CIDADE */
+.secaoCidade {
+    flex-direction: column;
+    position: relative;
+}
+
+.secaoCidade .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.secaoCidade .cards {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secaoCidade .cards .card {
+    background-image: url("imagens/card1.webp");
+    width: 32%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.secaoCidade .cards .card:nth-child(2) {
+    background-image: url("imagens/card2.webp");
+}
+
+.secaoCidade .cards .card:nth-child(3) {
+    background-image: url("imagens/card3.webp");
+}
+
+/* SEÇÃO DEPOIMENTOS */
+.secaoDepoimentos {
+    flex-direction: column;
+}
+
+.secaoDepoimentos .logotipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.secaoDepoimentos .depoimentos {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secaoDepoimentos .depoimentos .depoimento {
+    width: 31%;
+}
+
+/* SEÇÃO AGRADECIMENTOS */
+.secaoAgradecimentos {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #0C0102;
+    z-index: 2;
+}
+
+.secaoAgradecimentos h2 {
+    margin-bottom: 40px;
+}
+
+.secaoAgradecimentos ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("imagens/bg-footer.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+footer .conteudoFooter {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+}
+
+footer .conteudoFooter .logoFooter {
+    width: 30%;
+}
+
+footer .conteudoFooter .logoFooter h3 {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+footer .conteudoFooter .logoFooter h2 {
+    font-size: 3.7vw;
+    font-family: "Benguiat";
+}
+
+footer .conteudoFooter .secoesFooter {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    gap: 6%;
+    align-items: end;
+}
+
+footer .conteudoFooter .secoesFooter h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+footer .conteudoFooter .secoesFooter .redesSociais ul {
+    display: flex;
+    gap: 12px;
+}
+
+footer .logotiposFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+
+footer .textoInfinito {
+    width: max-content;
+    display: flex;
+}
+
+footer .textoInfinito h3 {
+    color: rgba(191, 191, 191);
+    font-size: 12vw;
+    font-family: "Benguiat", sans-serif;
+    mix-blend-mode: color-dodge;
+    animation: textoInfinito 9s infinite linear;
+    padding-left: 8vw;
+}
+
+@keyframes textoInfinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1500px) {
+    .secaoCidade {
+        padding: 4vw;
+    }
+}
+
+@media (max-width: 1400px) {
+    .secaoCidade .cards .card {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 4vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    header h2 {
+        font-size: 28px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 26% 4vw 0;
+    }
+
+    .hero .esquerda,
+    .hero .direita {
+        width: 100%;
+    }
+
+    .hero picture {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .hero picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero .esquerda h3,
+    .hero .esquerda h1 {
+        text-align: center;
+    }
+
+    .hero .esquerda h1 {
+        font-size: 12vw;
+    }
+
+    .hero .direita {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    .hero .direita button {
+        margin-bottom: 0;
+        line-height: normal;
+    }
+
+    .hero .direita p {
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+
+    .secaoCidade {
+        margin-top: 80px;
+        position: relative;
+        z-index: 3;
+        background-color: #0C0102;
+    }
+
+    .secaoCidade button {
+        display: none;
+    }
+
+    .secaoCidade .cards {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .secaoCidade .cards .card {
+        width: 100%;
+    }
+
+    .secaoDepoimentos .logotipos img:nth-child(1),
+    .secaoDepoimentos .logotipos img:nth-child(3) {
+        width: 20%;
+    }
+
+    .secaoDepoimentos .logotipos img:nth-child(2) {
+        width: 40%;
+    }
+
+    .secaoDepoimentos .depoimentos {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .secaoDepoimentos .depoimentos .depoimento {
+        width: 100%;
+    }
+
+    .secaoAgradecimentos {
+        margin: 40px 0px 60px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 120px;
+    }
+
+    .secaoAgradecimentos h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .secaoAgradecimentos ul {
+        display: flex;
+        width: max-content;
+        gap: 8vw;
+        animation: textoInfinito 10s infinite linear;
+    }
+
+    .secaoAgradecimentos li {
+        white-space: nowrap;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .textoInfinito {
+        animation-duration: 7s;
+    }
+
+    footer {
+        padding-top: 40px;
+        position: relative;
+        z-index: 1;
+        background-color: #0C0102;
+        margin-top: -60px;
+        padding-top: 60px;
+    }
+
+    footer .conteudoFooter {
+        padding: 4vw;
+        flex-direction: column;
+    }
+
+    footer .conteudoFooter .logoFooter {
+        width: 100%;
+    }
+
+    footer .conteudoFooter .logoFooter h2,
+    footer .conteudoFooter .logoFooter h3 {
+        text-align: center;
+    }
+
+    footer .conteudoFooter .logoFooter h2 {
+        font-size: 12vw;
+    }
+
+    footer .conteudoFooter .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+    }
+
+    footer .conteudoFooter .secoesFooter .redesSociais {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 40px 0px 32px;
+    }
+
+    footer .conteudoFooter .secoesFooter .parceiroMidia {
+        width: 50%;
+    }
+
+    footer .logotiposFooter {
+        margin-top: 40px;
+    }
+
+    footer .textoInfinito h3 {
+        font-size: 20vw;
+    }
+}
